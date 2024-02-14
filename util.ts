@@ -18,6 +18,6 @@ export function removeQueryUrl() {
     window.history.pushState({}, document.title, url.split('?')[0])
 }
 
-export function randint (min: number, max: number) {
+export function randint(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
