@@ -24,6 +24,16 @@ export function $$<T extends HTMLElement>(
     return Array.from(c.querySelectorAll(q)) as T[]
 }
 
+export function setCSSVar(key: string, value: string, node = document.body) {
+    return node.style.setProperty(`--${key}`, value)
+}
+
+export function getWidth(element: HTMLElement) {
+    return element.getBoundingClientRect().width
+}
+
+export const px = (px: number | string) => `${px}px`
+
 export function once(el: Element, evt: keyof ElementEventMap): Promise<any>
 export function once(el: Element, evt: string) {
     return new Promise((done) =>
